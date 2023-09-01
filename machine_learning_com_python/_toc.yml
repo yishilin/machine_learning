@@ -1,0 +1,17 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: markdown
+chapters:
+- file: introducao_machine_learning
+- file: fundamentos_machine_learning
+- file: preparacao_dados
+- file: metricas_desempenho
+- file: sob_capo
+- file: ajuste_modelo
+- file: fluxo_trabalho
+- file: metodos_conjuntos
+- file: aprendizado_nao_supervisionado
+- file: series_temporais
+- file: processamento_linguagem_natural
