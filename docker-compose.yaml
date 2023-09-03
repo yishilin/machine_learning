@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  jupyter:
+    build: .
+    image: jupyter/datascience-notebook
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/home/jovyan/work
+      - my_volume:/project
+    environment:
+      - JUPYTER_TOKEN=123456
+    container_name: jupyter
+
+volumes:
+  my_volume:
