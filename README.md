@@ -21,7 +21,7 @@ Para executar os notebooks, você pode usar o ambiente Docker pré-configurado f
 ```
 docker-compose up
 ```
-
+> A primeira vez que rodar o docker compose deverá demorar um tempo. Tenha paciência e aguarde pois muitos pacotes devem ser instalados!
 
 4. Abra seu navegador e acesse `http://localhost:8888`. Você verá o ambiente Jupyter Notebook com os notebooks deste repositório. Não esqueça que o token padrão é 123456
 
