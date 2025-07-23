@@ -3,7 +3,7 @@ version: "3"
 services:
   jupyter:
     build: .
-    image: jupyter/datascience-notebook
+    #image: jupyter/datascience-notebook
     ports:
       - "8888:8888"
     volumes:
@@ -11,7 +11,9 @@ services:
       - my_volume:/project
     environment:
       - JUPYTER_TOKEN=123456
+      - JUPYTER_RUNTIME_DIR=/tmp/jupyter/runtime
     container_name: jupyter
+
 
 volumes:
   my_volume:

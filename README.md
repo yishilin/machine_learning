@@ -18,9 +18,16 @@ Para executar os notebooks, você pode usar o ambiente Docker pré-configurado f
 
 3. Execute o seguinte comando para iniciar o ambiente Docker com o Jupyter Notebook:
 
+
+Jupyter Notebook: http://localhost:8888/
+
+出现问题 `podman up --build ` 容器直接退出的问题，可以用下面的命令解决：
+
+```bash
+podman system prune -a -f
+podman-compose up --build
 ```
-docker-compose up
-```
+
 > A primeira vez que rodar o docker compose deverá demorar um tempo. Tenha paciência e aguarde pois muitos pacotes devem ser instalados!
 
 4. Abra seu navegador e acesse `http://localhost:8888`. Você verá o ambiente Jupyter Notebook com os notebooks deste repositório. Não esqueça que o token padrão é 123456
