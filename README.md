@@ -1,25 +1,24 @@
-# Aprendizado de Máquina Passo a Passo
+# 机器学习分步指南
 
-Este repositório é um guia passo a passo para tópicos essenciais de Aprendizado de Máquina, juntamente com desafios práticos e um ambiente Docker pré-configurado para executar os notebooks Jupyter.
+本代码库包含机器学习基本主题的分步指南，以及动手挑战和用于运行 Jupyter 笔记本的预配置 Docker 环境。
 
-## Objetivo
+## 目的
 
-O objetivo deste repositório é fornecer uma introdução clara e prática aos conceitos fundamentais de Aprendizado de Máquina. Cada notebook aborda um tópico específico e inclui explicações detalhadas, código Python interativo e desafios para testar seus conhecimentos.
+本代码库的目标是清晰实用地介绍机器学习的基本概念。每个笔记本涵盖一个特定主题，并包含详细的解释、交互式 Python 代码和用于测试您知识的挑战。
 
-## Requisitos
+## 要求
 
-Para executar os notebooks, você pode usar o ambiente Docker pré-configurado fornecido neste repositório. Certifique-se de ter o Docker instalado em sua máquina.
+要运行笔记本，您可以使用本代码库提供的预配置 Docker 环境。请确保您的计算机上已安装 Docker。
 
-## Instruções de Uso
+## 使用说明
 
-1. Clone ou faça o download deste repositório em sua máquina local.
+1. 将此代码库克隆或下载到您的本地计算机。
 
-2. Navegue até o diretório raiz do repositório.
+2. 导航到代码库的根目录。
 
-3. Execute o seguinte comando para iniciar o ambiente Docker com o Jupyter Notebook:
+3. 运行以下命令，使用 Jupyter Notebook 启动 Docker 环境：
 
-
-Jupyter Notebook: http://localhost:8888/
+Jupyter Notebook：http://localhost:8888/
 
 出现问题 `podman up --build ` 容器直接退出的问题，可以用下面的命令解决：
 
@@ -28,16 +27,8 @@ podman system prune -a -f
 podman-compose up --build
 ```
 
-> A primeira vez que rodar o docker compose deverá demorar um tempo. Tenha paciência e aguarde pois muitos pacotes devem ser instalados!
+> 首次运行 Docker Compose 可能需要一段时间。请耐心等待，因为需要安装许多软件包！
 
-4. Abra seu navegador e acesse `http://localhost:8888`. Você verá o ambiente Jupyter Notebook com os notebooks deste repositório. Não esqueça que o token padrão é 123456
+4. 打开 Web 浏览器并访问 `http://localhost:8888`。您将看到 Jupyter Notebook 环境以及来自此仓库的笔记本。请不要忘记默认令牌是 123456。
 
-5. Execute as células de código em cada notebook para explorar os conceitos e completar os desafios.
-
-## Contribuições
-
-Contribuições são bem-vindas! Se você deseja adicionar novos desafios ou melhorias aos notebooks existentes, crie um fork deste repositório, faça suas alterações e envie um pull request.
-
-## Autor
-
-Afonso Brandão
+5. 运行每个笔记本中的代码单元，探索概念并完成挑战。
