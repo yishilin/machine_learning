@@ -4,6 +4,7 @@ ENV JUPYTER_TOKEN=123456
 
 # 使用 root 用户安装系统依赖
 USER root
+RUN echo 'root:123456' | chpasswd
 
 # 安装 Ruby、Zsh 及依赖
 RUN apt-get update && apt-get install -y \
@@ -42,9 +43,20 @@ RUN conda config --add channels conda-forge && \
     pandas=1.5 \
     scikit-learn=1.2 \
     matplotlib=3.7 \
+    pandas-profiling \
     && mamba clean -afy
 
 
+ENV http_proxy=http://127.0.0.1:7897
+ENV https_proxy=http://127.0.0.1:7897
+# 在非 root 用户下安装 Oh My Zsh（路径为 /home/appuser/.oh-my-zsh）
+RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+#RUN sed -i 's|/bin/bash|/bin/zsh|' /etc/passwd
+# 设置 zsh 为当前用户的默认 shell
+
+RUN chsh -s $(which zsh)
+
 USER jovyan
 WORKDIR /home/jovyan/work
+
 

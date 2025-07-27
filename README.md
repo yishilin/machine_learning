@@ -25,8 +25,19 @@ Jupyter Notebook：http://localhost:8888/
 出现问题 `podman up --build ` 容器直接退出的问题，可以用下面的命令解决：
 
 ```bash
-podman system prune -a -f
-podman-compose up --build
+
+cd ~/Documents/GitHub/machine_learning
+
+#clean: unused container, never used image, network, and cached data
+podman system prune -a -f  
+podman-compose up --build 
+open http://localhost:8888 #token: 123456
+
+# enter container terminal
+podman ps
+podman exec -it a-container-name /bin/bash
+
+
 ```
 
 > 首次运行 Docker Compose 可能需要一段时间。请耐心等待，因为需要安装许多软件包！
